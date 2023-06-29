@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- cellspacing distanza tra una cella e l'altra, se metto 0 collassano-->
+    <!-- cellpadding distanza tra bordo e carattere -->
+    <table border="2" cellpadding="8" cellspacing="16" bgcolor="yellow">
+        <caption>My data</caption>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Andrea</td>
+            <td>Rossi</td>
+            <td>andrea.rossi@gmail.com</td>
+            <td>€ 5000,00</td>
+        </tr>
+        <tr>
+            <td>Mario</td>
+            <td>Bianchi</td>
+            <td>mario.bianchi@gmail.com</td>
+            <td>€ 4500,00</td>
+        </tr>
+        <tr>
+            <td>Marta</td>
+            <td>Rossi</td>
+            <td>marta.rossi@gmail.com</td>
+            <td>€ 2000,00</td>
+        </tr>
+        <tr>
+            <td>Mariella</td>
+            <td>Bianchini</td>
+            <td>mariella.bianchini@gmail.com</td>
+            <td>€ 3500,00</td>
+        </tr>
+    </tbody>    
+    <tfoot>
+        <tr>
+            <!-- faccio occupare 3 colonne alla colonna totale -->
+            <!-- rowspan quando vogliamo che una cella sia su piu' righe>
+            <td colspan="3">Total</td>
+            <td>€ 15000,00</td>
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>

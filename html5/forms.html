@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="GET">
+        <div>
+            <label for="txtName">user name</label>
+            <input type="text" placeholder="insert your username" id="txtName" name="txtName">
+        </div>
+        <div>
+            <label for="email">user name</label>
+            <input type="email" placeholder="insert your email" id="email" name="email">
+        </div>
+        <div>
+            <label for="url">user name</label>
+            <input type="url" placeholder="insert your website" id="url" name="url">
+        </div>
+        <div>
+            <label for="txtAge">age</label>
+            <input type="number" placeholder="insert your username" id="txtAge" name="txtAge">
+        </div>
+        <div>
+            <label for="under18">Under 18</label>
+            <input type="radio" value="1" id="under18" name="under18" checked>
+            <label for="over18">Over 18</label>
+            <input type="radio" value="2" id="over18" name="under18">
+        </div>
+        <div>
+            <label for="check1">is 1</label>
+            <input type="checkbox" value="ck1" id="check1" name="check1" checked>
+            <label for="check2">is 2</label>
+            <input type="checkbox" value="ck2" id="check2" name="check2">
+            <input type="submit" value="Invia">
+        </div>
+        <div>
+            <label for="pizza">favourite pizza</label>
+            <select id="pizza" name="pizza">
+                <option value="cap">Capricciosa</option>
+                <option value="mar" selected>Margherita</option>
+                <option value="dia">Diavola</option>
+                <option value="pro">Prosciutto</option>
+            </select>            
+        </div>
+        <div>
+            <label for="txta1">my text area</label>
+            <textarea placeholder="insert your text" id="txta1" name="txta1"></textarea>
+        </div>    
+    </form>
+</body>
+</html>
