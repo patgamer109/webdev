@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact about earth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fasthand&family=Noto+Sans+TC:wght@100&family=Russo+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-size:0.9em; 
+            background: #fefae0;
+            color: #bc6c25;
+        }
+        /* those are classes */
+        .head-col{
+            background-color: red;
+        }
+        .head-font{
+            padding: 10px;
+        }
+        /* this is for id */
+        #geoh2{
+            background-color: #bbb;
+            padding: 5px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 250%; 
+            /* background-color: red; */
+            padding: 20px; /* padding is from area tag to text inside area tag*/
+            color: white;
+        }
+        h2 {
+            /* background-color: red;  */
+            margin: 20px; /* margin is distance from area tag to next or previous tag*/
+            color: #283618;
+        }
+        /* this is common for more tags */
+        h1, h2 {
+            border: 1px solid black;
+        }
+        ul {            
+            font-size: 30px; 
+            color: #606c38;
+        }
+        ol, ul {            
+            border-top: 1px solid black;
+            border-left: 2px dashed red;
+            border-right: 3px dashed yellow;
+            border-bottom: 4px solid aquamarine;
+            border-top-width: 10px;
+            border-right-style: double;
+            border-right-color: green;
+            /* border: 1px solid black; */
+            margin-top: 20px;            
+            margin-bottom: 50px;
+            margin-left: 40px;
+            margin-right: 120px; 
+            /* margin: 20 px 50px 120px 40px senso orario */
+            padding-top: 5px;            
+            padding-bottom: 10px;
+            padding-left: 15px;
+            padding-right: 20px;
+            list-style: inside; /* points of list inside on border */ 
+            /* padding: 20 px 50px 120px 40px senso orario */
+        }
+        .history {
+            padding: 10px;
+            line-height: 1.5; /* distance from 2 lines*/
+            /* font-weight: bold; */
+            font-weight: 500;
+            font-style: italic;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 1.3em;
+        }
+        #p1h {
+            font-family: 'Dancing Script';
+            text-align: left;
+        }
+        #p2h {
+            font-style: normal;
+            font-family: 'Russo One';
+            text-align: right;
+        }
+    </style>
+</head>
+<!--<body style="font-size:1.1em; background: #064706;">-->
+<body>
+    <!--<h1 style="font-size: 250%; background-color: red; color: aquamarine;">Facts about earth</h1>-->
+    <h1 class="head-col head-font">Facts about earth</h1>
+    <p>this is a unique planet cause it's only one who permitt life</p>
+    <h2 id="geoh2">GEOGRAPHY</h2>
+    <!-- <ul style="font-size: 40px; color: yellow;"> -->
+    <ul>
+        <li>the earth surface is 70% water</li>
+        <li>the highest point is Everest</li>
+        <li>the lowest point is Dead Sea</li>
+    </ul>
+    <h2 class="head-col head-font">atmosphere</h2>
+    <ol>
+        <li>78% nitrogen</li>
+        <li>21% oxygen</li>
+    </ol>
+    <div>
+        <img src="https://cultura.biografieonline.it/wp-content/uploads/2014/10/earth.jpg" alt="planet earth" title="planet earth" width="200" height="200">
+    </div>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qhaBiwrUeVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <h2 class="head-col">Quiz</h2>
+    <form action="index.php">
+        <p>what is the third planet from the sun</p>
+        <input type="text" name="answer1">
+        <p>what is the highest mountain ?</p>
+        <select name="highest" id="highest">
+            <option value="Everest">Everest</option>
+            <option value="K2">K2</option>
+            <option value="Denal">Denal</option>
+        </select>
+        <p>atmosphere is 78% nitrogen ahd 21% oxygen ?</p>
+        <input type="radio" id="rad1" name="rad" value="1">True
+        <input type="radio" id="rad2" name="rad" value="2">False        
+        
+    </form>  
+    <br>      
+    <table border="1">
+        <caption>fact about earth</caption>
+        <thead>
+            <tr><td>Fact</td><td>Source</td></tr>
+        </thead>
+        <tbody>
+            <tr><td>third planet from the sun</td><td>Nasa</td></tr>
+            <tr><td>third planet from the sun</td><td>Nasa</td></tr>
+            <tr><td colspan="2">stratos</td></tr>
+        </tbody>
+    </table>
+    <h2>hearth history</h2>
+    <p class="history" id="p1h">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of L
+    </p>
+    <p class="history" id="p2h">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 
+    </p>
+</body>
+</html>
