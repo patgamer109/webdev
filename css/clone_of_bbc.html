@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology - BBC New</title>
+    <style>
+        #topbar {
+            width: 1000px;
+            height: 48px;
+            margin: 0 auto;
+            background-color: white;
+        }
+        #logo {
+            margin-top: 5px;
+            float: left;
+            margin-right: 8px;
+        }
+        #signin-div {
+            font-weight: bold; 
+            font-size: 90%;           
+        }
+        #signin-img {
+            margin-top: 5px;
+            margin-left: 6px;
+            width: 25px;
+            float: left;
+        }
+        #wiggly-img {
+            margin-top: 5px;
+            margin-left: 6px;
+            width: 7px;
+            float: left;
+        }
+        #bell-img {
+            margin-top: 5px;
+            margin-left: 6px;
+            margin-right: 8px;
+            width: 25px;
+            float: left;
+        }
+        #signin-write {
+            float: left;
+            margin-top: 9px;
+            margin-left: 8px;
+        }
+        .topbar-section {
+            float: left;
+            border-left: 1px solid #ccc;
+            height: 55%;            
+        }
+        .topbar-menu {
+            padding-top: 9px;
+            padding-left: 8px;
+            padding-right: 9px;
+            font-weight: bold;
+                      
+        }
+        .topbar-menu:hover {
+            border-bottom: 3px solid black;
+        }
+        #topbar-search {
+            height: 75%;       
+        }
+        #more-arrow-img {
+            margin-top: 7px;
+            margin-left: 6px;
+            width: 12px;            
+        }
+        #search1 {
+            margin-top: 9px;
+            margin-left: 8px;
+            font-weight: bold;
+            font-size: 100%;
+            float: left;
+            background-color: #a9a9a9;
+            border: none;
+        }
+        #search1:hover {
+            border: 1px solid black;
+        }
+        #magnifying-glass-img {
+            margin-top: 9px;
+            height: 21px;      
+            float: left;      
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, Arial, sans-serif;        
+        }
+    </style>
+</head>
+<body>
+    <div id="topbar">
+        <img id="logo" src="images/bbc-logo.png">
+        <div id="signin-div" class="topbar-section">
+            <img id="signin-img" src="images/signinimage.png">
+            <span id="signin-write">Sign In</span>            
+        </div>
+        <div id="bell-id">
+            <img id="wiggly-img" src="images/wigglyline.png">
+            <img id="bell-img" src="images/bell.png">
+        </div>
+        <div class="topbar-section topbar-menu">
+            News
+        </div>
+        <div class="topbar-section topbar-menu">
+            Sport
+        </div>
+        <div class="topbar-section topbar-menu">
+            Weather
+        </div>
+        <div class="topbar-section topbar-menu">
+            iPlayer
+        </div>
+        <div class="topbar-section topbar-menu">
+            TV
+        </div>
+        <div class="topbar-section topbar-menu">
+            More
+            <img id="more-arrow-img" src="images/more-arrow.png">
+        </div>
+        <div class="topbar-section" id="topbar-search"> 
+            <input type="text" placeholder="Search" id="search1">
+            <input type="image" id="magnifying-glass-img" src="images/magnifying-glass.png">
+        </div>
+
+
+    </div>
+</body>
+</html>
