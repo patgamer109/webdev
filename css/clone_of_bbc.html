@@ -7,8 +7,9 @@
     <style>
         #topbar {
             width: 1000px;
-            height: 48px;
+            height: 38px;
             margin: 0 auto;
+            padding: 0;
             background-color: white;
         }
         #logo {
@@ -84,14 +85,89 @@
             height: 21px;      
             float: left;      
         }
+        .clear {
+            clear: both;
+        }
+        #menu-bar-container {
+            background-color: #bb1919;
+            width: 100%;
+            height: 70px;
+            border-top: 1px solid #a9a9a9;
+            border-bottom: 1px solid #a9a9a9;
+        }
+        #menubar {
+            width: 1000px;            
+            margin: 0 auto;            
+        }
+        #local-news {
+            float: right;
+            color: white;
+            font-size: 18px;
+            border: 1px #bb4545 solid;            
+            width: 170px;    
+            padding: 5px 5px 0px 5px;  
+            margin: 5px 5px 0px 0px;      
+        }
+        #local-news a {
+            color: white;
+            text-decoration: none;
+            position:relative;
+            top: -12px;
+        }
+        #local-news a:hover {
+            text-decoration: underline;
+        }
+        #local-news img {
+            height: 40px;
+        }
         body {
             margin: 0;
             padding: 0;
             font-family: Helvetica, Arial, sans-serif;        
         }
+        h1 {
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-size: 40px;
+            font-weight: normal;
+            margin-top: 10px;
+            float: left;
+        }
+        #menu-bar-2-container {
+            background-color: #a91717;
+        }
+        #menu-bar-2 {
+            width: 1000px;            
+            margin: 0 auto; 
+            height: 30px;             
+        }
+        #menu-bar-2 a {
+            color: white;
+            text-decoration: none;
+            border-right: 1px solid #ccc;
+            margin-top: 5px;
+            padding: 0 8px 0 0; /* 0 sopra e sotto, 5px destra e sinistra */
+            font-size: 18px;
+            position: relative;            
+            top: 5px;
+        }
+        #menu-bar-2 a:hover {
+            text-decoration: underline;
+        }
+        .no-border {
+            border: none !important;
+        }
+        #down-arrow {
+            height: 10px;
+            position: relative;
+            top: 4px;
+        }
     </style>
 </head>
 <body>
+    
+    <!-- topbar -->
     <div id="topbar">
         <img id="logo" src="images/bbc-logo.png">
         <div id="signin-div" class="topbar-section">
@@ -125,8 +201,37 @@
             <input type="text" placeholder="Search" id="search1">
             <input type="image" id="magnifying-glass-img" src="images/magnifying-glass.png">
         </div>
+    </div>
+    
+    <div class="clear"></div>
 
-
+    <!-- menubar -->
+    <div id="menu-bar-container">
+        <div id="menubar">
+            <h1>NEWS</h1>
+            <div id="local-news">
+                <a href="">Find local news</a>
+                <img src="images/pointer.png">
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="menu-bar-2-container">
+            <div id="menu-bar-2">
+                <a href="">Menù</a>
+                <a href="">UK</a>
+                <a href="">Wolrd</a>
+                <a href="">Business</a>
+                <a href="">Politics</a>
+                <a href="">Tech</a>
+                <a href="">Science</a>
+                <a href="">Health</a>
+                <a href="">Education</a>
+                <a href="">Entertainment&Arts</a>
+                <a href="">Video&Audio</a>
+                <a href="" class="no-border">More</a>
+                <img id="down-arrow" class="no-border" src="images/more-arrow.png">
+            </div>
+        </div>
     </div>
 </body>
 </html>
