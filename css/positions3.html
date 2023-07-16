@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #first-section {   
+            color: #4285f4;        
+            background-color: #cef6ce;
+            width: 200px;
+            position: relative;
+            left: 60px;
+            top: 100px;
+        } 
+        #second-section {
+            background-color: #bab4f7;
+            width: 200px;  
+            position: relative;
+            top: -100px;
+            left: 60px;
+
+            
+        }
+        #green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+        .clear-float {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="first-section">
+        <p>The quick brown fox jumped over the lazy dog</p>    
+        <p>Wow, I love internal css</p>
+    </div>
+    <div id="second-section">
+        <p id="green">This is some more text <a href="">And this test is a link</a></p>    
+        <p class="red">CSS is Cool!</p>
+    </div>
+    <!-- <div class="clear-float"></div> -->
+    <!-- without clear-float, paragraph is between the two blocks -->
+    <!-- with clear-float, paragraph is under the two blocks -->
+    <p>This paragraph is not floated</p>
+</body>
+</html>
