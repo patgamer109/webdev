@@ -4,29 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascriptevent</title>
-    <style>
-        div {
-            margin: 0 auto;
-            width: 250px;
-            background-color: black;
-            color: white;
-            height: 300px;
-            text-align: center;
-            font-size: 2em;
-            font-family: Verdana;
-        }
-        button {
-            font-size: 70%;
-            background-color: green;
-            color: white;
-            height: 50px;
-            padding: 5px;
-            border-radius: 20%;
-            border: 1px solid black;
-        }        
-    </style>
+    <link rel="stylesheet" href="jsevents.css">
     <script>
-        alert('alert on head');
+        //alert('alert on head');
+        // it doesn't play cause the dom is not made here
+        // we could move this script on body or use addEventListener on dom loaded
+        // document.body.getElementById('save').onclick = function () {
+        //     alert("click button save");
+        // }
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('save').onclick = function ()  {
+                alert('click on save button');
+            }
+        });       
     </script>
 </head>
 <body>
@@ -35,10 +25,15 @@
         <!-- on this.style or inline style can't use "-"" but remove; -->
         <!-- remove "-" and make capitol letter after "-" -->
         <!-- background-color -> backgroundColor -->
-        <button onmouseout="this.style.backgroundColor='green'" onmouseover="this.style.backgroundColor='blue'" onclick="alert('are you sure you want to save ?')">Save</button>
+        <!-- <button id="save" onmouseout="this.style.backgroundColor='green'" onmouseover="this.style.backgroundColor='blue'" onclick="alert('are you sure you want to save ?')">Save</button> -->
+        <button id="save" onmouseout="this.style.backgroundColor='green'" onmouseover="this.style.backgroundColor='blue'">Save</button>
     </div>
     <script>
-        alert('alert on body');
+        // alert('alert on body');
+        // here the body is loaded
+        // document.getElementById('save').onclick = function () {
+        //     alert("click button save");
+        // }
     </script>
 </body>
 </html>

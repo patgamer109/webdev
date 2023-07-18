@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascriptevent</title>
+    <link rel="stylesheet" href="jsevents.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        
+            var buttonSave = document.getElementById('save');
+            let buttonSave2 = document.querySelector('#save');
+            let classp2 = document.querySelector('.cl2');
+
+            alert(classp2);
+            buttonSave.addEventListener('click', function () {
+                alert('click on save button');
+                // innertext non interpreta il testo, se gli scrivo un tag me lo riporta
+                document.querySelector('p').innerHTML='<h3>change text from save button</h3>';
+            });
+            buttonSave.addEventListener('mouseover', function () {
+                this.style.backgroundColor='blue';
+            });
+            buttonSave.addEventListener('mouseout', function () {
+                this.style.backgroundColor='green';
+            });  
+            buttonSave2.addEventListener('click', function () {
+                alert('second way for click');
+            });
+            classp2.addEventListener('mouseover', function () {
+                this.style.color='blue';
+            })
+            classp2.addEventListener('mouseout', function () {
+                this.style.color='white';
+            })
+              
+        });       
+    </script>
+</head>
+<body>
+    <div>
+        <p onmouseover="this.style.color='red'" onmouseout="this.style.color='white'">Click me to save data!</p>
+        <button id="save">Save</button>
+        <p class="cl2">testo secondo paragrafo</p>
+    </div>
+
+</body>
+</html>
