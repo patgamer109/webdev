@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 200px;            
+            float: left;
+            margin: 0.2%;
+            padding: 0.2%;
+        }
+        p {
+            float: left;            
+        }
+        button {
+            float: left;
+            margin-top: 7%;
+            margin-left: 1%;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function resAge(age) {
+                return "age: " + age;
+            }
+            function resNum(num) {
+                return "num: " + num;
+            }
+            
+            let resultAge = document.getElementById('resultAge');
+            let resultNum = document.getElementById('resultNum');
+            let plusAge = document.getElementById('plusAge');
+            let minusAge = document.getElementById('minusAge');
+            let plusNum = document.getElementById('plusNum');
+            let minusNum = document.getElementById('minusNum');
+
+            const py = 12;
+            // py = 11; this is an error
+
+            // this are global var
+            var age = 10;
+            var num = 12.1;
+            
+            plusAge.addEventListener('click', () => {
+                age = age + 1;
+                resultAge.innerHTML = resAge(age);
+            })
+            minusAge.addEventListener('click', () => {
+                age = age - 1;
+                resultAge.innerHTML = resAge(age);
+            })
+            plusNum.addEventListener('click', () => {
+                num = num + 0.1;                
+                resultNum.innerHTML = resNum(num);
+            })
+            minusNum.addEventListener('click', () => {
+                num = num - 0.1;                             
+                resultNum.innerHTML = resNum(num);                
+            })
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <p id="resultAge">age: 10</p>
+        <button id="plusAge">+</button>
+        <button id="minusAge">-</button>    
+    </div>
+    <div>
+        <p id="resultNum">num: 12.1</p>
+        <button id="plusNum">+</button>
+        <button id="minusNum">-</button>
+    </div>
+</body>
+</html>
