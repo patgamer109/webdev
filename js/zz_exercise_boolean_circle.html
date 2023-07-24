@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let cred = document.getElementById('red');
+            let cgreen = document.getElementById('green');
+            let cblue = document.getElementById('blue');
+            cred.addEventListener("click", () => {
+                cred.style.display = 'none';
+            })
+            // posso usare anche questo metodo
+            // cred.onclick = function () {
+            //     cred.style.display = 'none';
+            // }
+            cgreen.addEventListener("click", () => {
+                cgreen.style.display = 'none';
+            })
+            cblue.addEventListener("click", () => {
+                cblue.style.display = 'none';
+            }) 
+            // array di elementi con classe circle potrei usarlo con il for
+            // const elements = document.querySelectorAll("circle");
+            // console.log(elements);
+            // if (elements) {
+            //     elements[0].onclick = function () {
+            //         elements[0].style.display = "none";
+            //     }    
+            // }
+        })
+    </script>
+    <style>
+        /* posso usare display flex in un div contenitore per fare in modo
+           di disporre verticalmente o orizzontalmente gli elementi */
+        #main {
+            display: flex;
+            /* flex-direction: column; */
+            align-items: center;
+            justify-content: center;
+            height: 700px;
+            width: 700px;
+            border: 2px solid black;
+        }
+        .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            /* float: left; */
+            margin: 10px;            
+        }
+        #red {
+            background-color: red;
+            /* display: none; */
+        }
+        #green {
+            background-color: green;
+        }
+        #blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+    <div class="circle" id="red"></div>
+    <div class="circle" id="green"></div>
+    <div class="circle" id="blue"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let canDrinkABeer = true;
+            let isAStudent = false;
+            // == >= <= != || &&
+            // === !==
+            console.log(5 == 6); // false
+            console.log(5 <= 6); // true
+
+            console.log(canDrinkABeer || isAStudent); // or
+            console.log(canDrinkABeer && isAStudent); // and
+            console.log(!(canDrinkABeer && isAStudent)); // not and
+            // 0, '', null, false ... sono tutti valori falsi
+            // una stringa o un numero valorizzati non nulli sono sempre veri
+            if ('prova') {
+                console.log('this is true');
+            }
+            if (!canDrinkABeer && isAStudent) {
+                console.log('you can get in');
+            } else {
+                console.log('you can not get in');
+            }
+            const age = 22;
+            if (age < 6) {
+                console.log('primary school');
+            } else if (age >= 6 && age < 12) {
+                console.log('secondary school');
+            } else if (age >= 12 && age < 18) {
+                console.log('senior high');
+            } else {
+                console.log('university');
+            }
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
