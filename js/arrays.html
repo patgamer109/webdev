@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let favouriteFood = new Array(10);
+            favouriteFood[1] = 'prova';
+            favouriteFood[2] ='prova2';
+            console.log('favouriteFood: ' + favouriteFood);
+            console.log(favouriteFood.length);
+            favouriteFood = new Array('pizza', 'pasta');
+            favouriteFood.push('gnocchi'); // aggiunge in coda
+            favouriteFood.push('tagliatelle');
+            let myFood = favouriteFood.pop(); // toglie dalla coda
+            console.log('myFood: ' + myFood);
+            console.log('favouriteFood: ' + favouriteFood);
+            console.log(favouriteFood.length);
+            console.log(favouriteFood[0]);
+            let favouriteFood2 = [];
+            // pulisce la console a runtime
+            // console.clear(); 
+            console.log('favouriteFood2: ' + favouriteFood2);
+            console.log(favouriteFood2.length);            
+            favouriteFood2 = ['provolone', 'stracchino', 'caciotta'];
+            favouriteFood2.unshift('brie'); // aggiunge in testa
+            console.log('favouriteFood2: ' + favouriteFood2);
+            console.log(favouriteFood2.length);
+            myFood2 = favouriteFood2.shift(); // toglie dalla testa
+            console.log('myFood2: ' + myFood2);
+            console.log('favouriteFood2: ' + favouriteFood2);
+            console.log(favouriteFood2.length);
+            favouriteFood2.splice(2, 0, 'asiago'); // aggiungo in mezzo
+            console.log('favouriteFood2: ' + favouriteFood2);
+            console.log(favouriteFood2.length);
+            favouriteFood2.splice(2, 1, 'montasio'); // aggiungo in mezzo, tolgo un elem, in pratica rimpiazzo
+            console.log('favouriteFood2: ' + favouriteFood2);
+            console.log(favouriteFood2.length);            
+            // esempio di foreach per un array
+            let idx1 = 0;
+            favouriteFood2.forEach(function(ele) {
+                console.log(idx1 + ' - ' + ele);
+                idx1++;
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
