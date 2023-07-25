@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let str1 = "<ul>";
+            for(let idx1 = 0; idx1 <= 10; idx1++) {
+                if ((idx1 % 2) != 0) {
+                    str1 = str1 + "<li>value of idx1: " + idx1 + "</li>";
+                }
+            }
+            str1 = str1 + "</ul>";
+            document.getElementById("par1").innerHTML = str1;
+
+            let str2 = "<ul>";
+            idx2 = 0;
+            for(;;) {
+                if ((idx2 % 2) == 0) {
+                    str2 = str2 + "<li>value of idx2: " + idx2 + "</li>";
+                }
+                idx2++;
+                if (idx2 > 20) {
+                    break;
+                }
+            }
+            str2 = str2 + "</ul>";
+            document.getElementById("par2").innerHTML = str2;
+
+            let str3 = "<ul>";            
+            let tweets = ["first tweet", "second tweet", "third tweet", "fourth tweet"];
+            totalTweets = tweets.length;
+            for(let counter = 0; counter < totalTweets; counter++) {
+                str3 = str3 + "<li>tweets[" + counter + "]: " + tweets[counter] + "</li>";                
+            }
+            str3 = str3 + "</ul>";
+            document.getElementById("par3").innerHTML = str3;
+        })
+    </script>
+</head>
+<body>
+    <h1>For cycle</h1>
+    <hr>
+    <p id="par1"></p>
+    <hr>
+    <p id="par2"></p>
+    <hr>
+    <p id="par3"></p>
+</body>
+</html>
