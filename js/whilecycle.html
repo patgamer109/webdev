@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // questo ciclo non viene mai eseguito
+            while (false) {
+                console.log("at least once 1");
+            }
+            // questo ciclo viene eseguito una volta sola
+            do {
+                console.log("at leaste once 2");
+            } while (false)
+
+            // ciclo infinito con break
+            let idx1 = 0;
+            while (true) {
+                console.log("idx1: " + idx1);
+                idx1++;
+                if (idx1 > 5) {
+                    break;
+                }
+            }
+
+            // ciclo finito
+            let idx2 = 0;
+            while (idx2 < 5) {
+                console.log("idx2: " + idx2);
+                idx2++;
+            }
+
+            // ciclo al contrario
+            let tweets = ["first tweet", "second tweet", "third tweet", "fourth tweet"];
+            totalTweets = tweets.length;
+            idx2 = totalTweets - 1;
+            while (idx2 >= 0) {
+                console.log("tweets[" + idx2 + "]: " + tweets[idx2]);
+                idx2--;
+            }
+        })
+    </script>
+</head>
+<body>
+    <h1>While cycles</h1>
+    <h2>please look on console</h2>
+</body>
+</html>
