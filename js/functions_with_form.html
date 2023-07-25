@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-group {            
+            margin: 5px;            
+        }
+        input {
+            border: 1px solid grey;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function calculate(params) {            
+            const val1 = +params.number1.value; // devo mettere il + davanti per far capire che è un numero
+            const val2 = +params.number2.value;                           
+            document.getElementById("result").innerHTML = "<h2>" + average(val1, val2) + "</h2>"
+            return false; // impedisce l'invio del form
+        }
+        function average(number1, number2 = 1) {
+            return (number1 + number2) / 2;
+        }
+        document.addEventListener("DOMContentLoaded", () =>{
+            let butCalculate = document.getElementById("butCalculate");
+            butCalculate.addEventListener("click", () => {
+                let number1 = document.getElementById("number1");
+                let number2 = document.getElementById("number2");
+            })
+        })        
+    </script>
+</head>
+<body>
+    <h1>Functions</h1>
+    <form onsubmit="return calculate(this)">
+        <div class="form-group">
+            <label for="number1">Number1</label>
+            <input type="number" id="number1">            
+        </div>
+        <div class="form-group">
+            <label for="number2">Number2</label>
+            <input type="number" id="number2">            
+        </div>
+        <div class="form-group">
+            <button>Calculate</button>            
+        </div>
+        <div id="result"></div>
+    </form>
+    
+</body>
+</html>

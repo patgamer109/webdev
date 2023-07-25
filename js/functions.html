@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function average(number1, number2 = 1) {
+            return (number1 + number2) / 2;
+        }
+        document.addEventListener("DOMContentLoaded", () =>{
+            console.log("average(4,2): " + average(4,2));
+            console.log("average(4): " + average(4)); // use of default parameter
+        })        
+    </script>
+</head>
+<body>
+    <h1>Functions</h1>
+    <h2>look on console for results</h2>
+</body>
+</html>
