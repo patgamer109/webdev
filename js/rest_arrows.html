@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            sum(3, 4, 5, 6, "a", function () {});
+            sum2(3,4, function(a, b) {
+                alert(a + b);
+            })
+            // passo ad una funzione un altra funzione
+            execute(sum3);
+            execute(mul3);
+            result1 = sumall1(4, 5, 6, 7, 8);
+            console.log('result1: ' + result1);
+            result2 = sumall2(4, 5, 6, 7, 8, 9);
+            console.log('result2: ' + result2);
+            // arrow function
+            const arrowSum = (a, b) => a + b;
+            console.log('arrowSum: ' + arrowSum(3,5));
+            const arrowEq = (a, b, c) => {
+                const result = b**2 - a * c;
+                return result;
+            }
+            console.log('arrowEq: ' + arrowEq(7,5,3));
+        })
+        function sum(...params) {
+            console.log(params);           
+        }
+        function sum2(...params) {
+            console.log(params[2]);
+            const f = params[2];
+            f(8,7);
+        }
+        function sum3(a, b) {
+            return (a + b);
+        }
+        function mul3(a, b) {
+            return (a * b);
+        }
+        function execute(func) {
+            console.log(func(4,6));
+        }
+        function sumall1(...params) {
+            // ciclo gli elementi dell'array e li sommo
+            let totalValue = 0;
+            let totalElems = params.length;
+            alert(totalValue);
+            alert(totalElems);
+            for (let idx1 = 0; idx1 <= totalElems - 1; idx1++) {
+                totalValue += params[idx1];
+            }
+            return totalValue;
+        }
+        function sumall2(...params) {
+            // la reduce e' una funzione dell'oggetto array che ripete
+            // la funzione passata ciclando gli elementi dell'array
+            return params.reduce(simpleSum);
+        }
+        function simpleSum(a, b) {
+            return a + b;
+        }
+    </script>
+</head>
+<body>
+    <h1>rest arrows</h1>
+    <h2>show output on console</h2>
+</body>
+</html>

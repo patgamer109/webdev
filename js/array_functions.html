@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let tweets = ['first', 'second', 'third', 'fourth'];
+            const totalTweets = tweets.length;
+            for (let counter = 0; counter < totalTweets; counter++) {
+                console.log("tweets[" + counter + "]: " + tweets[counter]);
+            }
+            console.log("+--------+");
+            // tweets.forEach(function(tweet) {
+            //     console.log(tweet);
+            // });
+            tweets.forEach(tweet => console.log(tweet))
+            console.log("+--------+");
+            const tweetsUppercase = tweets.map(tweet => tweet.toUpperCase());
+            console.log(tweetsUppercase);
+            console.log("+--------+");
+            function showTweet(tweet) {
+                console.log(tweet);
+            }
+            tweets.forEach(showTweet);
+            console.log("+--------+");
+        })
+        
+    </script>
+</head>
+<body>
+    <h1>Array Functions</h1>
+    <h2>show output on console</h2>
+</body>
+</html>
