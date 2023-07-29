@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test your reactions</title>
+    <style>
+        h1 {
+            font-size: 1.8em;
+            font-weight: bold;
+            
+        }
+        h2 {
+            font-size: 1em;
+            font-weight: 500;
+        }
+        
+        #timeTaken {
+
+        }
+        #shape {
+            height: 200px;
+            width: 200px;
+            /* border-radius: 50%; */
+            background-color: red; 
+            display: none;   
+            position: relative;
+            top: 30px;
+            left: 50px;        
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Test Your Reactions!</h1>
+    <h2>click on the boxes and circles as quickly as you can!</h2>
+    <p>your time: <span id="timeTaken">0</span>s</p>
+    <div id="shape">
+    
+    </div>
+    <script>
+        const shape = document.getElementById("shape");
+        const span = document.getElementById("timeTaken"); 
+        const minw = 20;
+        const maxw = 400;   
+        const maxTop = 450;
+        const maxLeft = 900;  
+        const maxInterval = 2000;
+          
+        let intId = null;
+        makeShapeAppears2();
+        let startTime = Date.now();
+        shape.addEventListener("click", shapeClicked);
+
+        function randomColor() {
+            const numbers = "0123456789ABCDEF".split('');
+            result = "#";
+            for (let i = 0; i < 6; i++) {
+                result = result + numbers[Math.floor(Math.random() * 16)];
+            }
+            return result;
+        }
+
+        function elapseTime(t1, t2 = Date.now()) {
+            return ((t2 - t1) / 1000).toFixed(2);
+        }
+
+        function shapeClicked() {
+           shape.style.display = "none";
+           const totalTime = elapseTime(startTime);
+           span.innerHTML = totalTime;
+           makeShapeAppears2();
+           startTime = Date.now();
+           
+        }
+        
+        function makeShapeAppears1() {
+            if (intId) {
+                clearInterval(intId);
+            }
+            intId = setInterval(() => {
+                shape.style.display = "block";
+            }, Math.random() * maxInterval);            
+        }
+        function makeShapeAppears2() {
+            if (intId) {
+                clearTimeout(intId);
+            }
+            intId = setTimeout(() => {
+                let w = Math.random() * maxw
+                if (w < minw) {
+                    w = minw;
+                }
+                w = w + "px";
+                if (Math.random() > .5) {
+                    shape.style.borderRadius = "50%";
+                } else {
+                    shape.style.borderRadius = 0;
+                }
+                shape.style.backgroundColor = randomColor();
+                shape.style.top = Math.random() * maxTop + "px";
+                shape.style.left = Math.random() * maxLeft + "px";
+                shape.style.width = w;
+                shape.style.height = w;
+                shape.style.display = "block";
+            }, Math.random() * maxInterval);            
+        }
+   </script>
+</body>
+</html>
