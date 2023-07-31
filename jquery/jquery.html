@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- locally jquery download from website  -->
+    <script src="jqmod/jquery-3.7.0.js"></script>
+    <!-- load jquery from cdn  -->
+    <link rel="stylesheet" href="css/style1.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
+    <script>
+        // old mode in js
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     alert("dom content loaded");        
+        // })
+        // new mod in jquery
+        // $(
+        //     () => {
+        //         alert("dom content loaded");
+        //     }
+        // )
+        // old mode in js
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     circle1 = document.getElementById("circle");
+        //     circle1.addEventListener("mouseover", () => {
+        //         alert("on mouse over circle");
+        //     })
+        //     circle1.addEventListener("mouseout", () => {
+        //         alert("on mouse out circle");
+        //     })   
+        // })
+        // new mod in jquery
+        $(
+            () => {
+                $(circle).mouseover( (evt) => {
+                    // alert("on mouse over circle");
+                    $(circle).css("background-color", "blue");                    
+                })
+                $(circle).mouseout( () => {
+                    // alert("on mouse out circle");
+                    $(circle).css("background-color", "green");                    
+                })
+                $(circle).click( (evt) => {
+                    alert("circle clicled");
+                    evt.target.style.border = "4px solid black";
+                })               
+            }
+        )
+    </script>
+</head>
+<body>
+    <p id="myp">My paragraph</p>
+    <div id="circle"></div>
+    <div class="square"></div>    
+    <div class="square"></div>    
+</body>
+</html>
