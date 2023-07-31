@@ -13,6 +13,14 @@
     background-color: red;
     margin: 10px;
 }
+.square2 {
+    width: 150px;
+    height: 150px;    
+    background-color: greenyellow;
+    border-radius: 5%;
+    margin: 10px;
+}
+
 #myp {
     font-family: sans-serif;
 }
