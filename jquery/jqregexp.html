@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery reg exp</title>        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script>
+            $(() => {
+                let regexp = /is/;
+                let mystr = "Regexp is great!";
+                // ignore minuscolo and maiuscolo
+                // let regexp = /Great/i;
+                // let mystr = "Regexp is great!";
+                // return e, e, e an array of three elements cause we finde 3 e letter on phrase
+                // let regexp = /e/g;
+                // let mystr = "Regexp is great!";
+                let result = mystr.match(regexp);
+                alert("result: " + result);
+            })            
+        </script>        
+    </head>
+    <body>
+        
+    </body>
+</html>
