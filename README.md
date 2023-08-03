@@ -7,4 +7,5 @@ contiene una serie di esempi di utilizzo divisi per sezione di esercizi fatti pe
 - css3
 - js
 - jquery
+- ajax
 - zz_docs
