@@ -1,8 +1,19 @@
 $(() => {
+    // let urlFakeapi = "adds/data.json";
     let urlFakeapi = "https://fakestoreapi.com/products";
+    // alternative method
+    // fetch(urlFakeapi).then(resp => resp.json()).then(res => {
+    //     console.log(res);
+    // })
     $.ajax({
         url: urlFakeapi,
-        method: "GET"
+        method: "GET",
+        async: true,
+        dataType: "json",
+        headers: {
+            accept: "application/json",
+            "Accept-Control-Allow-Origin": "*"
+        }
     }).done((resp) => {
         const row = $("<div>");
         row.addClass("row");
