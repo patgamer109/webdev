@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code player</title>
+    <script src="adds/jquery-3.7.0.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+        #header {
+            width: 99%;
+            background-color: #eeeeee;
+            padding: 5px;
+            height: 30px;
+        }
+        #buttonContainer {
+            width: 200px;
+            margin: 0 auto;
+        }
+        #logo {
+            float: left;
+            font-weight: bold;
+            font-size: 120%;
+            padding-top: 3px;
+            padding-left: 5px;
+        }
+        .toggleButton {
+            float: left;
+            border: 1px solid grey;
+            border-right: none;
+            padding: 6px;
+            font-size: 90%;
+        }
+        .active {
+            background-color: #e8f2ff;
+        }
+        .highLightedButton {
+            background-color: grey;
+        }
+        #buttonHtml {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        #buttonCss {
+            
+        }
+        #buttonJs {
+            
+        }
+        #buttonOutput {
+            border-right: 1px solid grey;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        textarea {
+            resize: none;
+            border-top: none;
+            border-color: grey;
+        }
+        iframe {
+            border: none;
+        }
+        .panel {
+            width: 50%;
+            float: left;
+            border-left: none;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        $(() => {
+            function updateOutput() {
+                let prepareHtml = "<html><head><style type='text/css'>" + $("#cssPanel").val() + "</style></head><body>" + $("#htmlPanel").val() + "</body></html>";
+                $("#outputPanel").contents().find("html").html(prepareHtml);
+                document.getElementById("outputPanel").contentWindow.eval($("#jsPanel").val());
+                // eval($("#jsPanel").val());
+            }
+            $(".toggleButton").on("mouseenter", function() {
+                $(this).addClass("highLightedButton");
+            })
+            $(".toggleButton").on("mouseleave", function() {
+                $(this).removeClass("highLightedButton");
+            })
+            $(".toggleButton").on("click", function() {                
+                $(this).toggleClass("active");
+                $(this).removeClass("highLightedButton");
+                let panelId = "";
+                let buttonId = $(this).attr("id");
+                switch (buttonId) {
+                    case "buttonHtml":
+                        panelId = "htmlPanel";
+                        break;
+                    case "buttonCss":
+                        panelId = "cssPanel";
+                        break;
+                    case "buttonJs":
+                        panelId = "jsPanel";
+                        break;
+                    case "buttonOutput":
+                        panelId = "outputPanel";
+                        break;
+                }
+                $("#" + panelId).toggleClass("hidden");
+                let numberOfActivePanels = 4 - $(".hidden").length;
+                $(".panel").width($(window).width() / numberOfActivePanels - 15);
+            })
+            $(".panel").height($(window).height() - $("#header").height() - 20);            
+            $(".panel").width($(window).width() / 2 - 15);                         
+            $("#outputPanel").contents().find("html").html($("#htmlPanel").val());
+            $("#htmlPanel").on("change keyup paste", function() {
+                updateOutput();
+            })
+            updateOutput();
+        })
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            CodePlayer
+        </div>
+        <div id="buttonContainer">
+            <div class="toggleButton active" id="buttonHtml">HTML</div>
+            <div class="toggleButton" id="buttonCss">CSS</div>
+            <div class="toggleButton" id="buttonJs">JS</div>
+            <div class="toggleButton active" id="buttonOutput">OUTPUT</div>
+        </div>
+    </div>
+    <div id="bodyContainer">
+        <textarea id="htmlPanel" class="panel"><h1>Hello World!</h1><p>this is a paragraph</p><h2>and this is a normal title</h2></textarea>
+        <textarea id="cssPanel" class="panel hidden">p {color: green;}</textarea>
+        <textarea id="jsPanel" class="panel hidden">alert("hi there");</textarea>
+        <iframe id="outputPanel" class="panel"></iframe>
+    </div>
+    
+</body>
+</html>
