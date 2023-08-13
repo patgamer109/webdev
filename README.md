@@ -8,4 +8,5 @@ contiene una serie di esempi di utilizzo divisi per sezione di esercizi fatti pe
 - js
 - jquery
 - ajax
+- bootstrap
 - zz_docs
