@@ -10,4 +10,5 @@ contiene una serie di esempi di utilizzo divisi per sezione di esercizi fatti pe
 - ajax
 - bootstrap
 - php
+- mysql
 - zz_docs
