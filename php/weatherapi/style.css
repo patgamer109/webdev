@@ -1,0 +1,14 @@
+body {
+    background: url(sunset.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.container {
+    width: 500px;
+    margin: auto;
+    border: 1px solid #fff;
+    text-align: center;
+    margin-top: 15%;       
+}
+.form-group {
+    margin-top: 10px;
+}
