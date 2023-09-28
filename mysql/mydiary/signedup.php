@@ -1,10 +1,19 @@
 <?php
+    session_start();
     require('connection.php');
     require('header.php'); 
 ?>
 
 <main class="px-3">
 <h1>SIGN UP</h1>
+<?php
+  if (!empty($_SESSION['errors'])) {
+?>
+  <div class="alert alert-danger"><?= $_SESSION['errors']?></div>
+<?php
+  $_SESSION['errors'] = "";
+  }
+?>
 <div class="row">
 <div class="col-3"></div>
 <div class="col-6">
