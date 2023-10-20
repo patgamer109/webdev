@@ -80,8 +80,12 @@
                 <h3 class="float-md-start mb-0">Cover</h3>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
                     <a class="nav-link fw-bold py-1 px-0 <?= strpos($page,"index.php")!==false ? 'active' : ''; ?>" aria-current="page" href="index.php">Home</a>
+                    <?php if (!isUserLoggedIn()) { ?>
                     <a class="nav-link fw-bold py-1 px-0 <?= strpos($page,"signedup.php")!==false ? 'active' : ''; ?>" href="signedup.php">SIGNUP</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+                    <a class="nav-link fw-bold py-1 px-0 <?= strpos($page,"login.php")!==false ? 'active' : ''; ?>" href="login.php">LOGIN</a>
+                    <?php } else { ?>
+                    <a class="nav-link fw-bold py-1 px-0 <?= strpos($page,"logout.php")!==false ? 'active' : ''; ?>" href="logout.php">LOGOUT</a>
+                    <?php } ?>
                 </nav>
             </div>
         </header>

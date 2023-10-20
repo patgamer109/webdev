@@ -6,7 +6,7 @@
 ?>
 
 <main class="px-3">
-<h1>SIGN UP</h1>
+<h1>SIGN IN</h1>
 <?php
   if (!empty($_SESSION['errors'])) {
 ?>
@@ -18,7 +18,7 @@
 <div class="row">
 <div class="col-3"></div>
 <div class="col-6">
-<form method="post" action="signup.php">
+<form method="post" action="loginuser.php">
   <div class="mb-3">
     <label for="email" class="form-label">Email address</label>
     <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">

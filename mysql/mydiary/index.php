@@ -1,5 +1,10 @@
 <?php
     session_start();
+    require('functions.php');
+    if (!isUserLoggedIn()) {
+        header("Location: login.php");
+        die;
+    }
     require('connection.php');
     require('header.php'); 
 ?>

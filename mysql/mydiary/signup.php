@@ -30,8 +30,6 @@ $stm->close();
 
 if (!empty($errors)) {
     $_SESSION["errors"] = $errors;
-    header('Location: signedup.php');
-    die();
 }
 
 $passHash = password_hash($password, PASSWORD_DEFAULT);
@@ -41,6 +39,16 @@ $stm->bind_param('ss', $email, $passHash);
 $res = $stm->execute();
 if ($res && $stm->affected_rows) {
     $_SESSION["success"] = "user is registered";
+    $_SESSION["user_email"] = $email;
+    if ($remember) {
+        setcookie("user_email", $email, time() * 24 * 3600);
+    }
+    header("Location: index.php");
+    die();
+} else {
+    $_SESSION["errors"] = $conn->err;
+    header("Location: signedup.php");
+    die();
 }
 $stm->close();
 
