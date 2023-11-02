@@ -84,7 +84,14 @@
                     <a class="nav-link fw-bold py-1 px-0 <?= strpos($page,"signedup.php")!==false ? 'active' : ''; ?>" href="signedup.php">SIGNUP</a>
                     <a class="nav-link fw-bold py-1 px-0 <?= strpos($page,"login.php")!==false ? 'active' : ''; ?>" href="login.php">LOGIN</a>
                     <?php } else { ?>
-                    <a class="nav-link fw-bold py-1 px-0 <?= strpos($page,"logout.php")!==false ? 'active' : ''; ?>" href="logout.php">LOGOUT</a>
+                    <ul class="nav">
+                    <li class="nav-item p-x-4">
+                        <form action="logout.php" method="POST">
+                            <input type="hidden" name="logout" value="1">
+                            <button class="btn btn-default nav-link">LOGOUT</button>
+                        </form>                    
+                    </li>
+                    </ul>
                     <?php } ?>
                 </nav>
             </div>

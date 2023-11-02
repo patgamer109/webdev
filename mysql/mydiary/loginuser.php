@@ -37,6 +37,8 @@ if ($res && $result->num_rows) {
         if ($remember) {
             setcookie("user_email",$email, time() + 24 * 3600);
         }
+        header("Location: index.php");
+        die();
     } else {
         $_SESSION["errors"] = "wrong email or password";
         header("Location: login.php");
