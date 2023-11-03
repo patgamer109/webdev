@@ -11,4 +11,5 @@ contiene una serie di esempi di utilizzo divisi per sezione di esercizi fatti pe
 - bootstrap
 - php
 - mysql
+- wp1
 - zz_docs
