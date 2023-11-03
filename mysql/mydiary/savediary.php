@@ -22,9 +22,14 @@ $stm = $conn->prepare($sql);
 $email = getUserEmail();
 $stm->bind_param("ss", $diary, $email);
 $res = $stm->execute();
+$_SESSION["errors"] = "";
 if ($res && $stm->affected_rows > 0) {
     $_SESSION["message"] = "Diary updated";
 } else {
     $_SESSION["errors"] = "Diary was mpt updated: " . $conn->error;
 }
-header('Location: index.php');
+if(empty($_POST("isAjax"))) {
+    header('Location: index.php');
+} else {
+    echo $_SESSION["errors"] ?  : 1;
+}

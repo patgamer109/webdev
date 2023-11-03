@@ -20,7 +20,7 @@
         $_SESSION['success'] = "";
     }
 ?>
-<form action="savediary.php" method="POST">
+<form action="savediary.php" method="POST" id="diaryForm">
     <div class="form-group">
     <textarea cols="80" rows="10" name="diary" id="diary"><?= getUserDiary()?></textarea>
     </div>
